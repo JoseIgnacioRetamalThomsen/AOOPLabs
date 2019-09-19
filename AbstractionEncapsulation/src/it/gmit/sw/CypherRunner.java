@@ -5,7 +5,7 @@ public class CypherRunner {
 
 		Cypherator cc = new CaesarCypher(7);
 		//cc.setKey(7);
-		String message = "Go for it ^765$%%$";
+		String message = "Go for it ^765$%%$ «";
 		String enc = cc.encrypt(message);
 		
 		System.out.println(enc.toString());
