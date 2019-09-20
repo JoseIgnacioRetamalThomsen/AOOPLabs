@@ -20,8 +20,8 @@ public class VernamCypher extends AbstractCypher {
 	@Override
 	public byte[] encrypt(byte[] cypherText, boolean isEncrypt) {
 		for (int i = 0; i < cypherText.length; i++) {
-			cypherText[i] = isEncrypt ? (byte) (cypherText[i] ^ Integer.parseInt(getKey()))
-					: (byte) (cypherText[i] ^ Integer.parseInt(getKey()));
+			cypherText[i] = (byte) (cypherText[i] ^ Integer.parseInt(getKey()));
+					
 		}
 		return cypherText;
 	}
