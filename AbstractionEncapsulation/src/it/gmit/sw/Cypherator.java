@@ -4,12 +4,12 @@ public interface Cypherator {
 
 	String encrypt(String plainText) throws CypherException;
 
-	/* byte[] encrypt(byte[] plainText) throws CypherException; */
+	byte[] encrypt(byte[] plainText) throws CypherException;
 
 	String decrypt(String cypherText) throws CypherException;
 
-	/* byte[] decrypt(byte[] cypherText) throws CypherException; */
+	byte[] decrypt(byte[] cypherText) throws CypherException;
 
-	byte[] encrypt(byte[] cypherText, boolean isEncrypt) throws CypherException;
+
 
 }

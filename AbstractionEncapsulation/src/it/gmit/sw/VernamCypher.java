@@ -1,10 +1,10 @@
 package it.gmit.sw;
 
-public class CaesarCypher extends AbstractCypher {
+public class VernamCypher extends AbstractCypher {
 
 	private CypherKey key;
 
-	public CaesarCypher(int key) {
+	public VernamCypher(int key) {
 		super();
 		this.key = new CypherKeyImpl(key);
 	}
@@ -20,8 +20,8 @@ public class CaesarCypher extends AbstractCypher {
 	@Override
 	public byte[] encrypt(byte[] cypherText, boolean isEncrypt) {
 		for (int i = 0; i < cypherText.length; i++) {
-			cypherText[i] = isEncrypt ? (byte) (cypherText[i] - Integer.parseInt(getKey()))
-					: (byte) (cypherText[i] + Integer.parseInt(getKey()));
+			cypherText[i] = isEncrypt ? (byte) (cypherText[i] ^ Integer.parseInt(getKey()))
+					: (byte) (cypherText[i] ^ Integer.parseInt(getKey()));
 		}
 		return cypherText;
 	}
